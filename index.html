@@ -3,534 +3,1352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McNath Capital - SBA Loans & Business Acquisition Financing Specialists</title>
-    <meta name="description" content="McNath Capital specializes in SBA 7(a) loans and business acquisition financing. Get pre-qualified for SBA loans with our proven process and lender network.">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>McNath Capital Group | Business Advisory & Deal Network</title>
+    <meta name="description" content="McNath Capital Group connects business owners with the right capital, advisors, and partners at every stage — SBA lending, M&A, exit planning, valuations, and more.">
+    <meta name="keywords" content="SBA lending, M&A advisory, business brokerage, exit planning, business valuation, sell my business, SBA loan calculator, business value calculator, EBITDA multiple">
+    <meta property="og:title" content="McNath Capital Group | Business Advisory & Deal Network">
+    <meta property="og:description" content="We connect business owners with the right specialists at every stage — from growth capital to full exit.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "McNath Capital Group",
+        "description": "Business advisory and referral network connecting owners with SBA lenders, M&A advisors, brokers, and exit planners",
+        "url": "https://mcnathcapital.com",
+        "areaServed": "United States",
+        "founder": [{"@type": "Person", "name": "McNath Capital Founders"}]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2b6cb0;
-            --secondary-color: #2c5282;
-            --accent-color: #3182ce;
-            --success-color: #38a169;
-            --text-color: #2d3748;
-            --light-bg: #f7fafc;
+            --ink: #0d0f14;
+            --ink-soft: #1a1d27;
+            --ink-mid: #252836;
+            --slate: #3d4255;
+            --mist: #8b92a8;
+            --line: rgba(255,255,255,0.07);
+            --gold: #d4a843;
+            --gold-dim: rgba(212,168,67,0.12);
+            --gold-border: rgba(212,168,67,0.25);
+            --white: #ffffff;
+            --off-white: #f4f3ef;
+            --text-dim: rgba(255,255,255,0.55);
+            --text-faint: rgba(255,255,255,0.3);
+            --green: #4caf7d;
+            --red: #e05555;
+            --radius: 2px;
         }
-        
-        * {
+
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--ink);
+            color: var(--white);
+            overflow-x: hidden;
+            cursor: default;
         }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 100px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
+
+        /* ═══════════════════════════════ NAV ═══════════════════════════════ */
+        nav {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            z-index: 999;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            background: rgba(13,15,20,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--line);
         }
-        
-        .hero-content {
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .nav-logo-mark {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 0.85rem;
+            color: var(--gold);
+        }
+
+        .nav-logo-text {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-logo-text span {
+            color: var(--gold);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-btn {
+            background: var(--gold);
+            color: var(--ink);
+            padding: 0.45rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-radius: var(--radius);
+        }
+
+        .nav-btn:hover {
+            background: #e8bc55;
+        }
+
+        /* ═══════════════════════════════ HERO ═══════════════════════════════ */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 64px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(ellipse at 30% 50%, black 30%, transparent 80%);
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%);
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .hero-left {
+            padding: 5rem 3rem 5rem 3rem;
             position: relative;
             z-index: 2;
         }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--gold-dim);
+            border: 1px solid var(--gold-border);
+            padding: 0.35rem 0.9rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
             margin-bottom: 2rem;
         }
-        
-        .btn-success-custom {
-            background-color: var(--success-color);
-            border-color: var(--success-color);
-            padding: 12px 30px;
+
+        .hero-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            line-height: 1.08;
+            font-weight: 400;
+            margin-bottom: 1.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--text-dim);
+            max-width: 480px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--ink);
+            padding: 0.85rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: var(--radius);
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-gold:hover {
+            background: #e8bc55;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(212,168,67,0.25);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: all 0.25s;
+            display: inline-block;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(255,255,255,0.35);
+        }
+
+        .hero-founders {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .founder-avatars {
+            display: flex;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--ink);
+            background: var(--ink-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-left: -8px;
+        }
+
+        .avatar:first-child {
+            margin-left: 0;
+        }
+
+        .founder-text {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .founder-text strong {
+            color: var(--white);
+            display: block;
+        }
+
+        .hero-right {
+            position: relative;
+            z-index: 2;
+            padding: 5rem 3rem 5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* mini stat cards on hero right */
+        .hero-card {
+            background: var(--ink-soft);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: border-color 0.3s;
+        }
+
+        .hero-card:hover {
+            border-color: var(--gold-border);
+        }
+
+        .hero-card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-dim);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
-            border-radius: 6px;
-            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
-        
-        .btn-success-custom:hover {
-            background-color: #2f855a;
-            border-color: #2f855a;
-            transform: translateY(-2px);
+
+        .hero-card-label {
+            font-size: 0.7rem;
+            color: var(--mist);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
         }
-        
-        .stats-section {
-            background-color: var(--light-bg);
-            padding: 80px 0;
+
+        .hero-card-value {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            color: var(--white);
         }
-        
-        .stat-card {
-            text-align: center;
+
+        .hero-card-sub {
+            font-size: 0.75rem;
+            color: var(--text-faint);
+            margin-top: 0.15rem;
+        }
+
+        /* ═══════════════════════════════ DIVIDER ═══════════════════════════════ */
+        .divider-bar {
+            border-top: 1px solid var(--line);
+            padding: 1.25rem 3rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            overflow: hidden;
+            background: var(--ink-soft);
+        }
+
+        .divider-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-faint);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .divider-items {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            animation: scroll-x 25s linear infinite;
+            white-space: nowrap;
+        }
+
+        .divider-item {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .divider-item::before {
+            content: '—';
+            color: var(--gold);
+            font-size: 0.6rem;
+        }
+
+        @keyframes scroll-x {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ═══════════════════════════════ SECTIONS ═══════════════════════════════ */
+        section {
+            padding: 6rem 3rem;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            max-width: 40px;
+            height: 1px;
+            background: var(--gold-border);
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        /* ═══════════════════════════════ FOUNDERS ═══════════════════════════════ */
+        .founders-section {
+            background: var(--ink-soft);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .founders-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 6rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .founders-text p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--line);
+        }
+
+        .founder-card {
+            background: var(--ink);
             padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-            border-left: 5px solid var(--success-color);
         }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
+
+        .founder-initials {
+            width: 56px;
+            height: 56px;
+            border: 1.5px solid var(--gold-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            border-radius: 50%;
         }
-        
-        .stat-number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--success-color);
+
+        .founder-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .founder-title {
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .founder-bio {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+        }
+
+        .founders-model {
+            background: var(--ink);
+            padding: 2rem;
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .model-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            background: var(--gold-dim);
+            border: 1px solid var(--gold-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .model-copy h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
-        
-        .calculator-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+
+        .model-copy p {
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            line-height: 1.7;
         }
-        
-        .calculator-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .form-control-custom {
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 15px 20px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .form-control-custom:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.2rem rgba(43, 108, 176, 0.25);
-        }
-        
-        .result-card {
-            background: linear-gradient(135deg, var(--success-color), #48bb78);
-            color: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin-top: 2rem;
-            text-align: center;
-        }
-        
+
+        /* ═══════════════════════════════ SERVICES ═══════════════════════════════ */
         .services-section {
-            padding: 100px 0;
+            background: var(--ink);
         }
-        
-        .service-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-icon i {
-            font-size: 2.2rem;
-            color: white;
-        }
-        
-        .process-section {
-            background-color: var(--light-bg);
-            padding: 100px 0;
-        }
-        
-        .process-step {
+
+        .services-header {
             text-align: center;
-            padding: 2rem;
-            position: relative;
+            max-width: 600px;
+            margin: 0 auto 3.5rem;
         }
-        
-        .process-number {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
+
+        .services-header .section-label {
             justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
         }
-        
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            right: -50%;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-color);
-            opacity: 0.3;
-        }
-        
-        .process-step:last-child::after {
+
+        .services-header .section-label::after {
             display: none;
         }
-        
-        .testimonials-section {
-            padding: 100px 0;
+
+        .services-header p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-top: 1rem;
         }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            text-align: center;
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--line);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--ink-soft);
+            padding: 2rem 1.75rem;
+            transition: background 0.3s;
+            cursor: default;
             position: relative;
-            margin: 2rem 0;
+            overflow: hidden;
         }
-        
-        .testimonial-card::before {
-            content: '"';
+
+        .service-card::after {
+            content: '';
             position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 4rem;
-            color: var(--primary-color);
-            font-family: serif;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
-        
-        .navbar-custom {
-            background-color: white !important;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+
+        .service-card:hover {
+            background: var(--ink-mid);
         }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--primary-color) !important;
-            font-size: 1.5rem;
+
+        .service-card:hover::after {
+            transform: scaleX(1);
         }
-        
-        .nav-link {
-            color: var(--text-color) !important;
+
+        .service-num {
+            font-size: 0.65rem;
+            color: var(--text-faint);
+            letter-spacing: 0.15em;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .service-icon {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .service-desc {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-fee {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            padding: 0.3rem 0.65rem;
+            background: var(--gold-dim);
+            border: 1px solid var(--gold-border);
+            display: inline-block;
+            border-radius: var(--radius);
+        }
+
+        /* ═══════════════════════════════ CALCULATORS ═══════════════════════════════ */
+        .calc-section {
+            background: var(--ink-soft);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .calc-header {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .calc-header p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            max-width: 560px;
+            margin-top: 0.75rem;
+        }
+
+        .calc-tabs {
+            display: flex;
+            gap: 0;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--line);
+            max-width: 1200px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .calc-tab {
+            padding: 0.85rem 1.5rem;
+            font-size: 0.78rem;
             font-weight: 500;
-            margin: 0 1rem;
-            transition: color 0.3s ease;
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+            transition: all 0.2s;
+            white-space: nowrap;
         }
-        
-        .nav-link:hover {
-            color: var(--primary-color) !important;
+
+        .calc-tab:hover {
+            color: var(--white);
         }
-        
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 0 30px;
+
+        .calc-tab.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
         }
-        
-        .qualification-badge {
-            background: var(--success-color);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
+
+        .calc-panels {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .calc-panel {
+            display: none;
+        }
+
+        .calc-panel.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .calc-inputs {
+            background: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 2rem;
+        }
+
+        .calc-inputs h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .calc-inputs p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 1.75rem;
+            line-height: 1.55;
+        }
+
+        .field {
+            margin-bottom: 1.25rem;
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--mist);
+            margin-bottom: 0.5rem;
+        }
+
+        .field input, .field select {
+            width: 100%;
+            background: var(--ink-soft);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            padding: 0.7rem 1rem;
+            color: var(--white);
+            font-size: 0.9rem;
+            font-family: 'DM Sans', sans-serif;
+            outline: none;
+            transition: border-color 0.2s;
+            -webkit-appearance: none;
+        }
+
+        .field input:focus, .field select:focus {
+            border-color: var(--gold-border);
+        }
+
+        .field select option {
+            background: var(--ink-mid);
+        }
+
+        .calc-btn {
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 0.9rem;
+            background: var(--gold);
+            color: var(--ink);
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            transition: all 0.2s;
+        }
+
+        .calc-btn:hover {
+            background: #e8bc55;
+        }
+
+        .calc-results {
+            background: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calc-results h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.85rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.85rem;
+        }
+
+        .result-row:last-of-type {
+            border-bottom: none;
+        }
+
+        .result-label {
+            color: var(--text-dim);
+        }
+
+        .result-value {
+            font-weight: 600;
+            color: var(--white);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .result-value.highlight {
+            color: var(--gold);
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem;
+        }
+
+        .result-value.green {
+            color: var(--green);
+        }
+
+        .result-value.red {
+            color: var(--red);
+        }
+
+        .calc-cta-box {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--line);
+            margin-top: 1.5rem;
+        }
+
+        .calc-cta-box p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+            line-height: 1.55;
+        }
+
+        .calc-lead-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .calc-lead-form input {
+            flex: 1;
+            background: var(--ink-soft);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            padding: 0.65rem 1rem;
+            color: var(--white);
+            font-size: 0.82rem;
+            font-family: 'DM Sans', sans-serif;
+            outline: none;
+        }
+
+        .calc-lead-form input:focus {
+            border-color: var(--gold-border);
+        }
+
+        .calc-lead-form button {
+            background: var(--gold);
+            color: var(--ink);
+            border: none;
+            cursor: pointer;
+            padding: 0.65rem 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border-radius: var(--radius);
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .calc-lead-form button:hover {
+            background: #e8bc55;
+        }
+
+        .lead-success {
+            font-size: 0.8rem;
+            color: var(--green);
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        /* ═══════════════════════════════ PROCESS ═══════════════════════════════ */
+        .process-section {
+            background: var(--ink);
+        }
+
+        .process-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+        }
+
+        .process-step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num-box {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            border: 1px solid var(--gold-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+        }
+
+        .step-body h4 {
             font-size: 0.9rem;
             font-weight: 600;
-            display: inline-block;
-            margin: 5px;
+            margin-bottom: 0.35rem;
+            color: var(--white);
         }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+
+        .step-body p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .process-right-box {
+            background: var(--ink-soft);
+            border: 1px solid var(--line);
+            padding: 2.5rem;
+        }
+
+        .process-right-box h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-right-box > p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .revenue-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .revenue-table tr {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .revenue-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .revenue-table td {
+            padding: 0.7rem 0;
+            font-size: 0.8rem;
+        }
+
+        .revenue-table td:first-child {
+            color: var(--text-dim);
+        }
+
+        .revenue-table td:last-child {
+            text-align: right;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* ═══════════════════════════════ CTA FINAL ═══════════════════════════════ */
+        .cta-section {
+            padding: 5rem 3rem;
+            text-align: center;
+            background: var(--ink-soft);
+            border-top: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(212,168,67,0.05) 0%, transparent 65%);
+        }
+
+        .cta-section * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            max-width: 600px;
+            margin: 1rem auto 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            max-width: 480px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.75;
+        }
+
+        .cta-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ═══════════════════════════════ FOOTER ═══════════════════════════════ */
+        footer {
+            background: #080a0e;
+            border-top: 1px solid var(--line);
+            padding: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .footer-brand p {
+            font-size: 0.8rem;
+            color: var(--text-faint);
+            line-height: 1.7;
+            max-width: 260px;
+            margin-top: 1rem;
+        }
+
+        .footer-col h5 {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            padding: 0.3rem 0;
+            font-size: 0.78rem;
+        }
+
+        .footer-col a {
+            color: var(--text-faint);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.73rem;
+            color: var(--text-faint);
+        }
+
+        .footer-disc {
+            max-width: 700px;
+            font-size: 0.68rem;
+            color: rgba(255,255,255,0.18);
+            line-height: 1.65;
+            margin-top: 0.5rem;
+        }
+
+        /* ═══════════════════════════════ ANIMATIONS ═══════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════ RESPONSIVE ═══════════════════════════════ */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
-            .process-step::after {
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1.25rem;
+            }
+
+            .nav-links {
                 display: none;
+            }
+
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 80px 1.25rem 3rem;
+            }
+
+            .hero-right {
+                padding: 0 1.25rem 3rem;
+            }
+
+            .calc-panel.active {
+                grid-template-columns: 1fr;
+            }
+
+            .founders-inner, .process-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .divider-bar {
+                padding: 1rem 1.25rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-dollar-sign me-2"></i>McNath Capital
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#calculator">SBA Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#process">Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-success-custom text-white px-3" href="#contact">Get Pre-Qualified</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-mark">M</div>
+            <span class="nav-logo-text">McNath <span>Capital Group</span></span>
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#founders">About</a></li>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#partners">Partners</a></li>
+            </ul>
+            <a href="#calculators" class="nav-btn">Free Tools</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Buy Your Next Business with SBA Financing</h1>
-                        <p class="hero-subtitle">Specialized in SBA 7(a) loans and acquisition financing. Put down as little as 10% and finance up to $5M with our proven lender network and expedited process.</p>
-                        <div class="hero-buttons">
-                            <a href="#calculator" class="btn btn-success-custom btn-lg me-3">
-                                <i class="fas fa-calculator me-2"></i>SBA Loan Calculator
-                            </a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg">
-                                <i class="fas fa-phone me-2"></i>Get Pre-Qualified
-                            </a>
-                        </div>
-                        <div class="mt-4">
-                            <small class="opacity-75">✓ 95% Approval Rate &nbsp;&nbsp;&nbsp; ✓ 30-Day Process &nbsp;&nbsp;&nbsp; ✓ $50K - $5M Loans</small>
-                        </div>
-                    </div>
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-left">
+            <div class="hero-tag">Deal Advisory Network · Est. 2024</div>
+            <h1>Every Deal.<br>The <em>Right</em><br>Specialist.</h1>
+            <p class="hero-sub">McNath Capital Group connects business owners with vetted specialists at every stage of the deal lifecycle — from SBA lending to full exit. We find the right expert. You get the right outcome.</p>
+            <div class="hero-actions">
+                <a href="#calculators" class="btn-gold">Use Our Free Tools</a>
+                <a href="#services" class="btn-ghost">Explore Services →</a>
+            </div>
+            <div class="hero-founders">
+                <div class="founder-avatars">
+                    <div class="avatar">M</div>
+                    <div class="avatar" style="background:var(--ink-mid);">P</div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="text-center">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHJ4PSIyMCIvPgo8cGF0aCBkPSJNMTAwIDEwMEwyMDAgMTAwTDMwMCAxMDBNMTAwIDEzMEwyMDAgMTMwTDMwMCAxMzBNMTAwIDE2MEwyMDAgMTYwTDMwMCAxNjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgcng9IjgiLz4KPHN2ZyB4PSIxODAiIHk9IjE5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwIj4KICA8dGV4dCB4PSIyMCIgeT0iMTUiIGZpbGw9IiMyYjZjYjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+JCQkPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+Cg==" alt="SBA Financing" class="img-fluid" style="max-width: 400px;">
-                    </div>
+                <div class="founder-text">
+                    <strong>Founded by McNath & Partner</strong>
+                    Two deal professionals. One curated network.
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number">$150M+</div>
-                        <div class="stat-label">Loans Facilitated</div>
-                        <p class="text-muted">SBA financing successfully arranged</p>
-                    </div>
+        <div class="hero-right">
+            <div class="hero-card reveal">
+                <div class="hero-card-icon">🏦</div>
+                <div>
+                    <div class="hero-card-label">SBA Lending</div>
+                    <div class="hero-card-value">Up to $5M</div>
+                    <div class="hero-card-sub">7(a) & 504 programs · Partner lenders</div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Approval Rate</div>
-                        <p class="text-muted">For qualified applicants</p>
-                    </div>
+            </div>
+            <div class="hero-card reveal" style="transition-delay:0.1s">
+                <div class="hero-card-icon">📊</div>
+                <div>
+                    <div class="hero-card-label">M&A Advisory</div>
+                    <div class="hero-card-value">Buy & Sell Side</div>
+                    <div class="hero-card-sub">Lower middle market · LOI to close</div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number">30</div>
-                        <div class="stat-label">Days Average</div>
-                        <p class="text-muted">From application to funding</p>
-                    </div>
+            </div>
+            <div class="hero-card reveal" style="transition-delay:0.2s">
+                <div class="hero-card-icon">🚪</div>
+                <div>
+                    <div class="hero-card-label">Exit Planning</div>
+                    <div class="hero-card-value">3–5 Year Runway</div>
+                    <div class="hero-card-sub">Value maximization · Tax efficiency</div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Businesses Financed</div>
-                        <p class="text-muted">Successful acquisitions</p>
-                    </div>
+            </div>
+            <div class="hero-card reveal" style="transition-delay:0.3s">
+                <div class="hero-card-icon">🔢</div>
+                <div>
+                    <div class="hero-card-label">Business Valuation</div>
+                    <div class="hero-card-value">Certified Reports</div>
+                    <div class="hero-card-sub">CVA/ABV partner network · IRS-defensible</div>
+                </div>
+            </div>
+            <div class="hero-card reveal" style="transition-delay:0.4s">
+                <div class="hero-card-icon">💼</div>
+                <div>
+                    <div class="hero-card-label">Wealth Management</div>
+                    <div class="hero-card-value">Post-Exit Planning</div>
+                    <div class="hero-card-sub">RIA introductions · Liquidity management</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- SBA Loan Calculator -->
-    <section id="calculator" class="calculator-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="calculator-card">
-                        <div class="text-center mb-4">
-                            <h2 class="display-5 fw-bold mb-3">SBA 7(a) Loan Calculator</h2>
-                            <p class="lead text-muted">Calculate your monthly payment and see how much you can afford with SBA financing</p>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <form id="sbaForm">
-                                    <div class="mb-4">
-                                        <label for="loanAmount" class="form-label fw-bold">Loan Amount ($)</label>
-                                        <input type="number" class="form-control form-control-custom" id="loanAmount" placeholder="e.g., 2000000" required>
-                                        <small class="text-muted">SBA 7(a) loans up to $5,000,000</small>
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <label for="loanTerm" class="form-label fw-bold">Loan Term</label>
-                                        <select class="form-control form-control-custom" id="loanTerm" required>
-                                            <option value="">Select Term</option>
-                                            <option value="120">10 Years (Real Estate/Equipment)</option>
-                                            <option value="84">7 Years (Business Acquisition)</option>
-                                            <option value="60">5 Years (Working Capital)</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <label for="interestRate" class="form-label fw-bold">Interest Rate (%)</label>
-                                        <input type="number" class="form-control form-control-custom" id="interestRate" step="0.25" value="11.5" required>
-                                        <small class="text-muted">Current SBA rates: 11.0% - 13.5%</small>
-                                    </div>
-                                    
-                                    <div class="mb-4">
-                                        <label for="downPayment" class="form-label fw-bold">Down Payment (%)</label>
-                                        <select class="form-control form-control-custom" id="downPayment" required>
-                                            <option value="">Select Down Payment</option>
-                                            <option value="10">10% (Minimum SBA)</option>
-                                            <option value="15">15% (Preferred)</option>
-                                            <option value="20">20% (Strong Profile)</option>
-                                            <option value="25">25% (Excellent Terms)</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-success-custom btn-lg w-100">
-                                        <i class="fas fa-calculator me-2"></i>Calculate SBA Loan
-                                    </button>
-                                </form>
-                            </div>
-                            
-                            <div class="col-lg-6">
-                                <div id="sbaResults" style="display: none;">
-                                    <div class="result-card">
-                                        <h4 class="mb-4">Your SBA Loan Breakdown</h4>
-                                        <div class="row text-center mb-4">
-                                            <div class="col-6">
-                                                <div class="h3" id="monthlyPayment">-</div>
-                                                <div>Monthly Payment</div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="h3" id="downPaymentAmount">-</div>
-                                                <div>Down Payment</div>
-                                            </div>
-                                        </div>
-                                        <div class="row text-center">
-                                            <div class="col-6">
-                                                <div class="h4" id="totalInterest">-</div>
-                                                <div>Total Interest</div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="h4" id="totalCost">-</div>
-                                                <div>Total Cost</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="mt-4 p-4 bg-light rounded">
-                                        <h5>Qualification Requirements:</h5>
-                                        <div class="mt-3" id="qualificationBadges">
-                                            <span class="qualification-badge">Personal Credit Score 680+</span>
-                                            <span class="qualification-badge">Business Cash Flow Positive</span>
-                                            <span class="qualification-badge">Industry Experience</span>
-                                            <span class="qualification-badge">Sufficient Down Payment</span>
-                                        </div>
-                                        <div class="text-center mt-3">
-                                            <button class="btn btn-primary btn-lg" onclick="showPrequalForm()">
-                                                <i class="fas fa-check-circle me-2"></i>Get Pre-Qualified Now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div id="prequalForm" style="display: none;">
-                                    <div class="p-4 bg-primary text-white rounded">
-                                        <h4 class="mb-3">SBA Pre-Qualification Application</h4>
-                                        <p class="mb-3">Get pre-qualified in 24 hours with our streamlined process and preferred lender network.</p>
-                                        <form id="prequalContactForm">
-                                            <div class="mb-3">
-                                                <input type="text" class="form-control" id="prequalName" placeholder="Full Name" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="email" class="form-control" id="prequalEmail" placeholder="Email Address" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="tel" class="form-control" id="prequalPhone" placeholder="Phone Number" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <select class="form-control" id="prequalCredit" required>
-                                                    <option value="">Credit Score Range</option>
-                                                    <option value="750+">750+ (Excellent)</option>
-                                                    <option value="700-749">700-749 (Good)</option>
-                                                    <option value="680-699">680-699 (Fair)</option>
-                                                    <option value="650-679">650-679 (Needs Review)</option>
-                                                    <option value="<650">Below 650 (Challenging)</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <select class="form-control" id="prequalLiquid" required>
-                                                    <option value="">Available Cash/Assets</option>
-                                                    <option value="$500k+">$500,000+</option>
-                                                    <option value="$250-500k">$250,000 - $500,000</option>
-                                                    <option value="$100-250k">$100,000 - $250,000</option>
-                                                    <option value="$50-100k">$50,000 - $100,000</option>
-                                                    <option value="<$50k">Less than $50,000</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn btn-light btn-lg w-100">
-                                                Get My Pre-Qualification
-                                            </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- SCROLLING BAR -->
+    <div class="divider-bar">
+        <span class="divider-label">Our Network</span>
+        <div class="divider-items" id="scrollItems">
+            <span class="divider-item">SBA Lending</span>
+            <span class="divider-item">M&A Advisory</span>
+            <span class="divider-item">Business Brokerage</span>
+            <span class="divider-item">Exit Planning</span>
+            <span class="divider-item">Business Valuation</span>
+            <span class="divider-item">Commercial Real Estate</span>
+            <span class="divider-item">Private Equity Access</span>
+            <span class="divider-item">Wealth Management</span>
+            <span class="divider-item">Deal Sourcing</span>
+            <span class="divider-item">SBA Lending</span>
+            <span class="divider-item">M&A Advisory</span>
+            <span class="divider-item">Business Brokerage</span>
+            <span class="divider-item">Exit Planning</span>
+            <span class="divider-item">Business Valuation</span>
+            <span class="divider-item">Commercial Real Estate</span>
+            <span class="divider-item">Private Equity Access</span>
+            <span class="divider-item">Wealth Management</span>
+            <span class="divider-item">Deal Sourcing</span>
+        </div>
+    </div>
+
+    <!-- FOUNDERS -->
+    <section class="founders-section" id="founders">
+        <div class="founders-inner">
+            <div class="reveal">
+                <div class="section-label">Our Story</div>
+                <h2>Two Founders.<br>One Network.</h2>
+                <p style="color:var(--text-dim);font-size:0.95rem;line-height:1.85;margin-top:1rem;margin-bottom:1.25rem;">We built McNath Capital Group because we kept seeing the same problem: business owners getting to a critical inflection point — a loan, a sale, an exit — and not knowing who to trust or where to turn.</p>
+                <p style="color:var(--text-dim);font-size:0.95rem;line-height:1.85;margin-bottom:1.25rem;">We're not a law firm, a lender, or a brokerage. We're the people who've done enough deals to know who the best specialists are in every category — and who pick up the phone when we call.</p>
+                <p style="color:var(--text-dim);font-size:0.95rem;line-height:1.85;">Every referral we make is backed by a relationship, a vetting process, and a commitment to your outcome — not a directory listing.</p>
+            </div>
+            <div>
+                <div class="founders-grid reveal">
+                    <div class="founder-card">
+                        <div class="founder-initials">MC</div>
+                        <div class="founder-name">[Your Name]</div>
+                        <div class="founder-title">Managing Partner</div>
+                        <p class="founder-bio">Background in business finance, deal structuring, and owner advisory. Has worked across lending, transactions, and business strategy.</p>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-initials">JP</div>
+                        <div class="founder-name">[Partner Name]</div>
+                        <div class="founder-title">Partner</div>
+                        <p class="founder-bio">Brings expertise in [your partner's background]. Deep relationships across the SBA lender and M&A advisor community.</p>
+                    </div>
+                    <div class="founders-model">
+                        <div class="model-icon">🤝</div>
+                        <div class="model-copy">
+                            <h4>The McNath Model: We Connect. Specialists Execute.</h4>
+                            <p>We are a referral and advisory network. Every engagement is executed by a licensed specialist from our vetted partner network — lenders, brokers, CPAs, attorneys, RIAs. We coordinate the right fit and stay accountable to your outcome throughout.</p>
                         </div>
                     </div>
                 </div>
@@ -538,415 +1356,638 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">SBA Financing Services</h2>
-                <p class="lead text-muted">Comprehensive business acquisition financing solutions</p>
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="services-header reveal">
+            <div class="section-label">What We Connect You To</div>
+            <h2>Eight Specialties. One Conversation.</h2>
+            <p>Tell us where you are in your business journey. We'll tell you exactly who you need and make the introduction.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-num">01</div>
+                <div class="service-icon">🏦</div>
+                <div class="service-name">SBA Lending</div>
+                <p class="service-desc">We connect you with approved SBA lenders for 7(a) and 504 loans — whether you're buying a business, expanding, or acquiring real estate.</p>
+                <span class="service-fee">Acquisition · Growth · Real Estate</span>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-building"></i>
+            <div class="service-card reveal" style="transition-delay:0.05s">
+                <div class="service-num">02</div>
+                <div class="service-icon">📊</div>
+                <div class="service-name">M&A Advisory</div>
+                <p class="service-desc">Connecting sellers with qualified buyers and buy-side clients with target businesses. Licensed M&A advisors handle due diligence through close.</p>
+                <span class="service-fee">Buy-Side · Sell-Side · Lower Middle Market</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.1s">
+                <div class="service-num">03</div>
+                <div class="service-icon">🏪</div>
+                <div class="service-name">Business Brokerage</div>
+                <p class="service-desc">For Main Street and lower-middle-market business sales. Our partner brokers handle listings, marketing, buyer qualification, and closing.</p>
+                <span class="service-fee">Main Street · $500K–$10M Transactions</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.15s">
+                <div class="service-num">04</div>
+                <div class="service-icon">🗓️</div>
+                <div class="service-name">Exit Planning</div>
+                <p class="service-desc">Start 3–5 years before your planned exit. We connect you with exit planners who close value gaps, structure tax-efficient exits, and prepare your business to sell for maximum value.</p>
+                <span class="service-fee">Value Maximization · Tax Strategy</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.2s">
+                <div class="service-num">05</div>
+                <div class="service-icon">🔢</div>
+                <div class="service-name">Business Valuation</div>
+                <p class="service-desc">Certified appraisals for sales, SBA financing, estate planning, and litigation. Our CVA and ABV partner network delivers IRS-defensible reports.</p>
+                <span class="service-fee">CVA · ABV · SBA-Compliant Reports</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.25s">
+                <div class="service-num">06</div>
+                <div class="service-icon">🏢</div>
+                <div class="service-name">Commercial Real Estate</div>
+                <p class="service-desc">Owner-occupied and investment CRE — acquisitions, sale-leasebacks, 1031 exchanges. Licensed CRE brokers with SBA financing expertise.</p>
+                <span class="service-fee">Owner-Occupied · Investment · 1031</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.3s">
+                <div class="service-num">07</div>
+                <div class="service-icon">💰</div>
+                <div class="service-name">Private Equity Access</div>
+                <p class="service-desc">Introductions to PE sponsors, family offices, and search funds actively deploying capital in the lower middle market. Recaps, growth equity, and full buyouts.</p>
+                <span class="service-fee">Recapitalizations · Growth Equity</span>
+            </div>
+            <div class="service-card reveal" style="transition-delay:0.35s">
+                <div class="service-num">08</div>
+                <div class="service-icon">🌱</div>
+                <div class="service-name">Post-Exit Wealth</div>
+                <p class="service-desc">After the sale, you need a plan for the proceeds. We connect exiting owners with RIAs who specialize in post-liquidity wealth management and tax mitigation.</p>
+                <span class="service-fee">RIA Introductions · Wealth Planning</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATORS -->
+    <section class="calc-section" id="calculators">
+        <div class="calc-header reveal">
+            <div class="section-label">Free Tools</div>
+            <h2>Run the Numbers First.</h2>
+            <p>Use our calculators to understand your deal before you talk to anyone. No email required — but we'll offer to send your results when you're ready.</p>
+        </div>
+        <div class="calc-tabs reveal">
+            <div class="calc-tab active" onclick="switchCalc('sba')">SBA Loan Payment</div>
+            <div class="calc-tab" onclick="switchCalc('valuation')">Business Valuation</div>
+            <div class="calc-tab" onclick="switchCalc('margin')">Profit Margin</div>
+            <div class="calc-tab" onclick="switchCalc('dscr')">DSCR / Loan Qualifier</div>
+            <div class="calc-tab" onclick="switchCalc('exit')">Exit Readiness Score</div>
+        </div>
+        <div class="calc-panels">
+            <!-- SBA CALCULATOR -->
+            <div class="calc-panel active" id="calc-sba">
+                <div class="calc-inputs">
+                    <h3>SBA Loan Payment Calculator</h3>
+                    <p>Estimate your monthly payment for an SBA 7(a) or 504 loan based on amount, term, and current rates.</p>
+                    <div class="field">
+                        <label>Loan Amount ($)</label>
+                        <input type="number" id="sba-amount" value="500000" min="10000" max="5000000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Loan Term (Years)</label>
+                        <select id="sba-term">
+                            <option value="10">10 Years</option>
+                            <option value="15">15 Years</option>
+                            <option value="25" selected>25 Years (Real Estate)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="sba-rate" value="10.5" min="1" max="20" step="0.1">
+                    </div>
+                    <div class="field">
+                        <label>Down Payment (%)</label>
+                        <input type="number" id="sba-down" value="10" min="0" max="50" step="1">
+                    </div>
+                    <button class="calc-btn" onclick="calcSBA()">Calculate Payment</button>
+                </div>
+                <div class="calc-results">
+                    <h3>Your SBA Loan Estimate</h3>
+                    <div class="result-row"><span class="result-label">Loan Amount</span><span class="result-value" id="sba-r-amount">—</span></div>
+                    <div class="result-row"><span class="result-label">Down Payment Required</span><span class="result-value" id="sba-r-down">—</span></div>
+                    <div class="result-row"><span class="result-label">Amount Financed</span><span class="result-value" id="sba-r-financed">—</span></div>
+                    <div class="result-row"><span class="result-label">Monthly Payment</span><span class="result-value highlight" id="sba-r-monthly">—</span></div>
+                    <div class="result-row"><span class="result-label">Total Interest Paid</span><span class="result-value red" id="sba-r-interest">—</span></div>
+                    <div class="result-row"><span class="result-label">Total Cost of Loan</span><span class="result-value" id="sba-r-total">—</span></div>
+                    <div class="calc-cta-box">
+                        <p>Ready to get pre-qualified? We'll connect you with an approved SBA lender in our network — no cost, no obligation.</p>
+                        <div class="calc-lead-form">
+                            <input type="email" placeholder="Your email address" id="sba-email">
+                            <button onclick="submitLead('sba-email', 'sba-success')">Connect Me</button>
                         </div>
-                        <h4 class="mb-3">Business Acquisition Loans</h4>
-                        <p class="text-muted">Finance the purchase of existing businesses with SBA 7(a) loans. Up to $5M with as little as 10% down.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Up to $5,000,000 loan amount</li>
-                            <li><i class="fas fa-check text-success me-2"></i>10% minimum down payment</li>
-                            <li><i class="fas fa-check text-success me-2"></i>7-10 year repayment terms</li>
-                        </ul>
+                        <div class="lead-success" id="sba-success">✓ Got it — we'll be in touch within 1 business day.</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-home"></i>
+            </div>
+
+            <!-- VALUATION CALCULATOR -->
+            <div class="calc-panel" id="calc-valuation">
+                <div class="calc-inputs">
+                    <h3>Business Valuation Estimator</h3>
+                    <p>Get a quick EBITDA-based estimate of what your business may be worth. A certified appraisal will give you the real number.</p>
+                    <div class="field">
+                        <label>Annual Revenue ($)</label>
+                        <input type="number" id="val-revenue" value="2000000" step="50000">
+                    </div>
+                    <div class="field">
+                        <label>Annual Net Profit ($)</label>
+                        <input type="number" id="val-profit" value="400000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Add Back: Owner Salary ($)</label>
+                        <input type="number" id="val-salary" value="120000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Add Back: Other Perks ($)</label>
+                        <input type="number" id="val-addback" value="30000" step="5000">
+                    </div>
+                    <div class="field">
+                        <label>Industry</label>
+                        <select id="val-industry">
+                            <option value="3.5">Professional Services (3.5x)</option>
+                            <option value="4.0" selected>General Business (4.0x)</option>
+                            <option value="4.5">Technology / SaaS (4.5x)</option>
+                            <option value="3.0">Retail / Restaurant (3.0x)</option>
+                            <option value="5.0">Healthcare / Med (5.0x)</option>
+                            <option value="4.0">Manufacturing (4.0x)</option>
+                            <option value="3.5">Construction / Trade (3.5x)</option>
+                        </select>
+                    </div>
+                    <button class="calc-btn" onclick="calcValuation()">Estimate Value</button>
+                </div>
+                <div class="calc-results">
+                    <h3>Your Business Value Estimate</h3>
+                    <div class="result-row"><span class="result-label">Annual Revenue</span><span class="result-value" id="val-r-revenue">—</span></div>
+                    <div class="result-row"><span class="result-label">Seller's Discretionary Earnings (SDE)</span><span class="result-value" id="val-r-sde">—</span></div>
+                    <div class="result-row"><span class="result-label">EBITDA Multiple Applied</span><span class="result-value" id="val-r-multiple">—</span></div>
+                    <div class="result-row"><span class="result-label">Low Estimate</span><span class="result-value green" id="val-r-low">—</span></div>
+                    <div class="result-row"><span class="result-label">Mid Estimate</span><span class="result-value highlight" id="val-r-mid">—</span></div>
+                    <div class="result-row"><span class="result-label">High Estimate</span><span class="result-value green" id="val-r-high">—</span></div>
+                    <div class="calc-cta-box">
+                        <p>Want a certified valuation? Our partner CVAs deliver IRS-defensible reports starting at $2,500. We'll make the introduction.</p>
+                        <div class="calc-lead-form">
+                            <input type="email" placeholder="Your email address" id="val-email">
+                            <button onclick="submitLead('val-email', 'val-success')">Get Certified Valuation</button>
                         </div>
-                        <h4 class="mb-3">Commercial Real Estate</h4>
-                        <p class="text-muted">Owner-occupied commercial real estate financing through SBA 504 and 7(a) programs.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Owner-occupied properties</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Up to 90% financing available</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Fixed-rate options</li>
-                        </ul>
+                        <div class="lead-success" id="val-success">✓ Got it — we'll be in touch within 1 business day.</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-tools"></i>
+            </div>
+
+            <!-- MARGIN CALCULATOR -->
+            <div class="calc-panel" id="calc-margin">
+                <div class="calc-inputs">
+                    <h3>Profit Margin Calculator</h3>
+                    <p>Understand your gross, operating, and net margins — the numbers buyers and lenders look at first.</p>
+                    <div class="field">
+                        <label>Total Revenue ($)</label>
+                        <input type="number" id="mgn-revenue" value="1500000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Cost of Goods Sold / COGS ($)</label>
+                        <input type="number" id="mgn-cogs" value="600000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Operating Expenses ($)</label>
+                        <input type="number" id="mgn-opex" value="450000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Interest & Taxes ($)</label>
+                        <input type="number" id="mgn-tax" value="100000" step="5000">
+                    </div>
+                    <button class="calc-btn" onclick="calcMargin()">Calculate Margins</button>
+                </div>
+                <div class="calc-results">
+                    <h3>Your Margin Analysis</h3>
+                    <div class="result-row"><span class="result-label">Revenue</span><span class="result-value" id="mgn-r-rev">—</span></div>
+                    <div class="result-row"><span class="result-label">Gross Profit</span><span class="result-value" id="mgn-r-gross">—</span></div>
+                    <div class="result-row"><span class="result-label">Gross Margin %</span><span class="result-value highlight" id="mgn-r-gm">—</span></div>
+                    <div class="result-row"><span class="result-label">Operating Income (EBIT)</span><span class="result-value" id="mgn-r-ebit">—</span></div>
+                    <div class="result-row"><span class="result-label">Operating Margin %</span><span class="result-value highlight" id="mgn-r-om">—</span></div>
+                    <div class="result-row"><span class="result-label">Net Profit</span><span class="result-value" id="mgn-r-net">—</span></div>
+                    <div class="result-row"><span class="result-label">Net Margin %</span><span class="result-value highlight" id="mgn-r-nm">—</span></div>
+                    <div class="calc-cta-box">
+                        <p>Want to know how your margins compare to industry benchmarks — and what buyers will pay? Let's talk.</p>
+                        <div class="calc-lead-form">
+                            <input type="email" placeholder="Your email address" id="mgn-email">
+                            <button onclick="submitLead('mgn-email', 'mgn-success')">Get Benchmark Report</button>
                         </div>
-                        <h4 class="mb-3">Equipment Financing</h4>
-                        <p class="text-muted">Finance business equipment, machinery, and technology with competitive SBA terms.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>New and used equipment</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Extended repayment terms</li>
-                            <li><i class="fas fa-check text-success me-2"></i>No prepayment penalties</li>
-                        </ul>
+                        <div class="lead-success" id="mgn-success">✓ Got it — we'll be in touch within 1 business day.</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
+            </div>
+
+            <!-- DSCR CALCULATOR -->
+            <div class="calc-panel" id="calc-dscr">
+                <div class="calc-inputs">
+                    <h3>DSCR / Loan Qualifier</h3>
+                    <p>Debt Service Coverage Ratio is what SBA lenders use to determine if your business can support the loan. 1.25x is typically the minimum.</p>
+                    <div class="field">
+                        <label>Annual Net Operating Income ($)</label>
+                        <input type="number" id="dscr-noi" value="350000" step="10000">
+                    </div>
+                    <div class="field">
+                        <label>Proposed Annual Loan Payment ($)</label>
+                        <input type="number" id="dscr-payment" value="120000" step="5000">
+                    </div>
+                    <div class="field">
+                        <label>Existing Annual Debt Payments ($)</label>
+                        <input type="number" id="dscr-existing" value="30000" step="5000">
+                    </div>
+                    <button class="calc-btn" onclick="calcDSCR()">Check Qualification</button>
+                </div>
+                <div class="calc-results">
+                    <h3>Your Loan Qualification</h3>
+                    <div class="result-row"><span class="result-label">Net Operating Income</span><span class="result-value" id="dscr-r-noi">—</span></div>
+                    <div class="result-row"><span class="result-label">Total Annual Debt Service</span><span class="result-value" id="dscr-r-tds">—</span></div>
+                    <div class="result-row"><span class="result-label">Your DSCR</span><span class="result-value highlight" id="dscr-r-ratio">—</span></div>
+                    <div class="result-row"><span class="result-label">SBA Minimum (1.25x)</span><span class="result-value" style="color:var(--mist)">1.25x</span></div>
+                    <div class="result-row"><span class="result-label">Qualification Status</span><span class="result-value" id="dscr-r-status">—</span></div>
+                    <div class="result-row"><span class="result-label">Max Loan You Likely Qualify For</span><span class="result-value highlight" id="dscr-r-max">—</span></div>
+                    <div class="calc-cta-box">
+                        <p>Want to get in front of an SBA lender who can pre-qualify you in 24 hours? We'll make the call.</p>
+                        <div class="calc-lead-form">
+                            <input type="email" placeholder="Your email address" id="dscr-email">
+                            <button onclick="submitLead('dscr-email', 'dscr-success')">Connect to Lender</button>
                         </div>
-                        <h4 class="mb-3">Working Capital Loans</h4>
-                        <p class="text-muted">Flexible working capital solutions for business growth, inventory, and operational needs.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Flexible use of funds</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Competitive interest rates</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Quick approval process</li>
-                        </ul>
+                        <div class="lead-success" id="dscr-success">✓ Got it — we'll be in touch within 1 business day.</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4 class="mb-3">Debt Refinancing</h4>
-                        <p class="text-muted">Refinance existing business debt to improve cash flow and reduce monthly payments.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Lower interest rates</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Improved cash flow</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Consolidated payments</li>
-                        </ul>
+            </div>
+
+            <!-- EXIT READINESS -->
+            <div class="calc-panel" id="calc-exit">
+                <div class="calc-inputs">
+                    <h3>Exit Readiness Score</h3>
+                    <p>How ready is your business to sell? Answer 6 quick questions and we'll score your exit readiness and identify the biggest gaps.</p>
+                    <div class="field">
+                        <label>Years in Business</label>
+                        <select id="exit-age">
+                            <option value="0">Less than 2 years</option>
+                            <option value="5">2–5 years</option>
+                            <option value="10" selected>5–10 years</option>
+                            <option value="15">10+ years</option>
+                        </select>
                     </div>
+                    <div class="field">
+                        <label>Do you have 3 years of clean financials?</label>
+                        <select id="exit-financials">
+                            <option value="0">No / Not sure</option>
+                            <option value="5">Partial</option>
+                            <option value="15" selected>Yes, CPA-prepared</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Owner dependency — can the business run without you?</label>
+                        <select id="exit-dependency">
+                            <option value="0">I do everything</option>
+                            <option value="8">Somewhat — key staff help</option>
+                            <option value="15" selected>Largely yes</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Do you have documented processes & SOPs?</label>
+                        <select id="exit-sops">
+                            <option value="0">No</option>
+                            <option value="7">Some</option>
+                            <option value="15" selected>Yes, well-documented</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Revenue trend over past 3 years</label>
+                        <select id="exit-trend">
+                            <option value="0">Declining</option>
+                            <option value="8">Flat</option>
+                            <option value="15" selected>Growing</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Do you have a target exit timeline?</label>
+                        <select id="exit-timeline">
+                            <option value="5">Within 1 year</option>
+                            <option value="10">1–3 years</option>
+                            <option value="15" selected>3–5 years</option>
+                            <option value="8">Not sure</option>
+                        </select>
+                    </div>
+                    <button class="calc-btn" onclick="calcExit()">Score My Readiness</button>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-star"></i>
+                <div class="calc-results">
+                    <h3>Your Exit Readiness Report</h3>
+                    <div class="result-row"><span class="result-label">Overall Score</span><span class="result-value highlight" id="exit-r-score">—</span></div>
+                    <div class="result-row"><span class="result-label">Readiness Level</span><span class="result-value" id="exit-r-level">—</span></div>
+                    <div class="result-row"><span class="result-label">Financial Presentation</span><span class="result-value" id="exit-r-fin">—</span></div>
+                    <div class="result-row"><span class="result-label">Business Independence</span><span class="result-value" id="exit-r-indep">—</span></div>
+                    <div class="result-row"><span class="result-label">Process Documentation</span><span class="result-value" id="exit-r-proc">—</span></div>
+                    <div class="result-row"><span class="result-label">Recommended Next Step</span><span class="result-value highlight" id="exit-r-next" style="font-size:0.82rem;text-align:right;max-width:200px">—</span></div>
+                    <div class="calc-cta-box">
+                        <p>Get a personalized exit roadmap from one of our exit planning partners — at no cost for the initial consultation.</p>
+                        <div class="calc-lead-form">
+                            <input type="email" placeholder="Your email address" id="exit-email">
+                            <button onclick="submitLead('exit-email', 'exit-success')">Get My Exit Roadmap</button>
                         </div>
-                        <h4 class="mb-3">Franchise Financing</h4>
-                        <p class="text-muted">Specialized franchise financing for approved franchise concepts with expedited processing.</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Approved franchise directory</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Expedited processing</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Multi-unit financing</li>
-                        </ul>
+                        <div class="lead-success" id="exit-success">✓ Got it — we'll be in touch within 1 business day.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">Our SBA Loan Process</h2>
-                <p class="lead text-muted">From application to funding in 30 days with our streamlined process</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-2 col-md-4 mb-4">
+    <!-- PROCESS -->
+    <section class="process-section" id="partners">
+        <div class="process-inner">
+            <div class="reveal">
+                <div class="section-label">How It Works</div>
+                <h2>One Call. The Right Specialist. Every Time.</h2>
+                <p style="color:var(--text-dim);font-size:0.9rem;line-height:1.8;margin:1rem 0 2rem;">We've built the referral network so you don't have to vet dozens of providers. One conversation with McNath Capital routes you to exactly the right specialist — already briefed, already aligned on your situation.</p>
+                <div class="process-steps">
                     <div class="process-step">
-                        <div class="process-number">1</div>
-                        <h5>Pre-Qualification</h5>
-                        <p class="text-muted">Submit basic information for preliminary approval assessment</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="process-step">
-                        <div class="process-number">2</div>
-                        <h5>Documentation</h5>
-                        <p class="text-muted">Gather required financial documents and business information</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="process-step">
-                        <div class="process-number">3</div>
-                        <h5>Application</h5>
-                        <p class="text-muted">Complete formal SBA loan application with our guidance</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="process-step">
-                        <div class="process-number">4</div>
-                        <h5>Review</h5>
-                        <p class="text-muted">Lender review and SBA approval process coordination</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="process-step">
-                        <div class="process-number">5</div>
-                        <h5>Approval</h5>
-                        <p class="text-muted">Final approval and loan terms confirmation</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <div class="process-step">
-                        <div class="process-number">6</div>
-                        <h5>Funding</h5>
-                        <p class="text-muted">Closing and fund disbursement for your business purchase</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">Client Success Stories</h2>
-                <p class="lead text-muted">Real businesses, real results with SBA financing</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="testimonial-card">
-                        <p class="mb-4">McNath Capital helped us secure a $2.8M SBA loan to acquire our competitor. The process was smooth and professional throughout.</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div>
-                                <div class="fw-bold">David Park</div>
-                                <div class="text-muted">CEO, Pacific Manufacturing</div>
-                                <div class="text-warning">★★★★★</div>
-                            </div>
+                        <div class="step-num-box">01</div>
+                        <div class="step-body">
+                            <h4>You Use Our Tools or Reach Out</h4>
+                            <p>Start with a calculator, fill out a contact form, or call us directly. We learn your situation in one conversation.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="testimonial-card">
-                        <p class="mb-4">With only $150K down, we were able to purchase a $1.5M distribution business. Amazing what SBA financing can do!</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div>
-                                <div class="fw-bold">Maria Rodriguez</div>
-                                <div class="text-muted">Owner, Southwest Distribution</div>
-                                <div class="text-warning">★★★★★</div>
-                            </div>
+                    <div class="process-step">
+                        <div class="step-num-box">02</div>
+                        <div class="step-body">
+                            <h4>We Identify the Right Specialist</h4>
+                            <p>Based on your need — lending, exit, valuation, M&A — we identify the best-fit specialist from our vetted partner network.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="testimonial-card">
-                        <p class="mb-4">The team at McNath Capital made our franchise acquisition possible. Their lender relationships are unmatched.</p>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <div>
-                                <div class="fw-bold">James Wilson</div>
-                                <div class="text-muted">Franchisee, Wilson's Quick Lube</div>
-                                <div class="text-warning">★★★★★</div>
-                            </div>
+                    <div class="process-step">
+                        <div class="step-num-box">03</div>
+                        <div class="step-body">
+                            <h4>Warm Introduction, Full Context</h4>
+                            <p>We make a personal introduction with your full context. No cold calls, no starting from zero, no repeating your story.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num-box">04</div>
+                        <div class="step-body">
+                            <h4>Specialist Executes the Work</h4>
+                            <p>Your specialist — a licensed lender, broker, advisor, or appraiser — takes it from here under their credentials and expertise.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num-box">05</div>
+                        <div class="step-body">
+                            <h4>We Stay Accountable to Your Outcome</h4>
+                            <p>We check in throughout the engagement. If something isn't working, we course-correct. Our reputation rides on your result.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="display-5 fw-bold mb-3">Ready to Finance Your Next Acquisition?</h2>
-                    <p class="lead mb-0">Get pre-qualified for SBA financing in 24 hours with our expert team.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="tel:+1-555-SBA-LOAN" class="btn btn-light btn-lg">
-                        <i class="fas fa-phone me-2"></i>(555) SBA-LOAN
-                    </a>
-                </div>
+            <div class="process-right-box reveal">
+                <h3>Referral Revenue by Service</h3>
+                <p>McNath Capital earns referral fees from our partner network — disclosed in all partner agreements. Our advice to you is always independent.</p>
+                <table class="revenue-table">
+                    <tr><td>SBA Lending</td><td>0.5–1% of loan</td></tr>
+                    <tr><td>M&A Advisory</td><td>1–2% of deal value</td></tr>
+                    <tr><td>Business Brokerage</td><td>10–20% of commission</td></tr>
+                    <tr><td>Exit Planning</td><td>$2,000–$10,000 flat</td></tr>
+                    <tr><td>Business Valuation</td><td>15–25% of report fee</td></tr>
+                    <tr><td>Commercial Real Estate</td><td>20–25% of commission</td></tr>
+                    <tr><td>Private Equity</td><td>0.5–1% of raise</td></tr>
+                    <tr><td>Wealth Management</td><td>25 bps AUM (ongoing)</td></tr>
+                </table>
+                <p style="color:var(--text-faint);font-size:0.73rem;margin-top:1.25rem;line-height:1.6;">All referral arrangements are disclosed and compliant with applicable federal and state regulations. McNath Capital does not hold licenses as a broker-dealer, investment advisor, or real estate broker.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4 class="mb-3">
-                        <i class="fas fa-dollar-sign me-2"></i>McNath Capital
-                    </h4>
-                    <p class="mb-3">Specializing in SBA loans and business acquisition financing. Your trusted partner for growth through strategic acquisitions.</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Loan Programs</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">SBA 7(a) Loans</a></li>
-                        <li><a href="#" class="text-white-50">SBA 504 Loans</a></li>
-                        <li><a href="#" class="text-white-50">Equipment Financing</a></li>
-                        <li><a href="#" class="text-white-50">Working Capital</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h5>Industries</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">Manufacturing</a></li>
-                        <li><a href="#" class="text-white-50">Professional Services</a></li>
-                        <li><a href="#" class="text-white-50">Retail</a></li>
-                        <li><a href="#" class="text-white-50">Franchises</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Contact Info</h5>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone me-2"></i>(555) SBA-LOAN</p>
-                        <p><i class="fas fa-envelope me-2"></i>partnerships@mcnathcapital.com</p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Los Angeles, CA</p>
-                    </div>
-                </div>
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="section-label" style="justify-content:center;">Let's Talk</div>
+        <h2>Ready to Find the Right Specialist?</h2>
+        <p>One conversation is all it takes. Tell us where you are — we'll tell you exactly who you need and make the introduction.</p>
+        <div class="cta-options">
+            <a href="#calculators" class="btn-gold">Use Our Free Tools</a>
+            <a href="mailto:info@mcnathcapital.com" class="btn-ghost">Email Us Directly</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo" style="text-decoration:none;">
+                    <div class="nav-logo-mark">M</div>
+                    <span class="nav-logo-text">McNath <span>Capital Group</span></span>
+                </a>
+                <p>Connecting business owners with the right specialists at every stage — from capital to exit. Woodmere, New York.</p>
             </div>
-            <hr class="my-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <p class="mb-0">&copy; 2026 McNath Capital. All rights reserved.</p>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <small class="text-white-50">Licensed Mortgage Broker | NMLS #123456</small>
-                </div>
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#">SBA Lending</a></li>
+                    <li><a href="#">M&A Advisory</a></li>
+                    <li><a href="#">Business Brokerage</a></li>
+                    <li><a href="#">Exit Planning</a></li>
+                    <li><a href="#">Business Valuation</a></li>
+                    <li><a href="#">Commercial Real Estate</a></li>
+                    <li><a href="#">Private Equity Access</a></li>
+                    <li><a href="#">Post-Exit Wealth</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Free Tools</h5>
+                <ul>
+                    <li><a href="#calculators">SBA Loan Calculator</a></li>
+                    <li><a href="#calculators">Business Valuation Tool</a></li>
+                    <li><a href="#calculators">Profit Margin Calculator</a></li>
+                    <li><a href="#calculators">DSCR Qualifier</a></li>
+                    <li><a href="#calculators">Exit Readiness Score</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#founders">About Us</a></li>
+                    <li><a href="#partners">Our Model</a></li>
+                    <li><a href="#">Become a Partner</a></li>
+                    <li><a href="mailto:info@mcnathcapital.com">Contact</a></li>
+                </ul>
             </div>
         </div>
+        <div class="footer-bottom">
+            <span>© 2026 McNath Capital Group. All rights reserved.</span>
+            <span>Privacy · Terms</span>
+        </div>
+        <p class="footer-disc">McNath Capital Group is a referral and advisory network. We are not a licensed broker-dealer, investment advisor, SBA lender, real estate broker, or law firm. All services are delivered by licensed partner firms. Referral fees are disclosed in all partner agreements in compliance with applicable federal and state regulations. Nothing on this site constitutes financial, legal, or investment advice.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
-        // SBA Loan Calculator
-        document.getElementById('sbaForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
-            const loanTermMonths = parseFloat(document.getElementById('loanTerm').value);
-            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
-            const downPaymentPercent = parseFloat(document.getElementById('downPayment').value) / 100;
-            
-            if (!loanAmount || !loanTermMonths || !interestRate || !downPaymentPercent) {
-                alert('Please fill in all fields');
+        // ─── SCROLL REVEAL ───
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('in');
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        // ─── CALC TABS ───
+        function switchCalc(id) {
+            document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('calc-' + id).classList.add('active');
+        }
+
+        // ─── FORMATTERS ───
+        const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+        const fmtx = n => n.toFixed(2) + 'x';
+        const fmtpct = n => n.toFixed(1) + '%';
+
+        // ─── SBA CALCULATOR ───
+        function calcSBA() {
+            const amount = parseFloat(document.getElementById('sba-amount').value) || 0;
+            const years = parseFloat(document.getElementById('sba-term').value) || 25;
+            const rate = parseFloat(document.getElementById('sba-rate').value) / 100 / 12 || 0;
+            const downPct = parseFloat(document.getElementById('sba-down').value) / 100 || 0;
+
+            const down = amount * downPct;
+            const financed = amount - down;
+            const n = years * 12;
+            const monthly = rate ? financed * rate * Math.pow(1+rate,n) / (Math.pow(1+rate,n)-1) : financed/n;
+            const total = monthly * n;
+            const interest = total - financed;
+
+            document.getElementById('sba-r-amount').textContent = fmt(amount);
+            document.getElementById('sba-r-down').textContent = fmt(down);
+            document.getElementById('sba-r-financed').textContent = fmt(financed);
+            document.getElementById('sba-r-monthly').textContent = fmt(monthly) + '/mo';
+            document.getElementById('sba-r-interest').textContent = fmt(interest);
+            document.getElementById('sba-r-total').textContent = fmt(total);
+        }
+        calcSBA();
+
+        // ─── VALUATION CALCULATOR ───
+        function calcValuation() {
+            const revenue = parseFloat(document.getElementById('val-revenue').value) || 0;
+            const profit = parseFloat(document.getElementById('val-profit').value) || 0;
+            const salary = parseFloat(document.getElementById('val-salary').value) || 0;
+            const addback = parseFloat(document.getElementById('val-addback').value) || 0;
+            const multiple = parseFloat(document.getElementById('val-industry').value) || 4;
+
+            const sde = profit + salary + addback;
+            const mid = sde * multiple;
+            const low = sde * (multiple - 0.5);
+            const high = sde * (multiple + 0.5);
+
+            document.getElementById('val-r-revenue').textContent = fmt(revenue);
+            document.getElementById('val-r-sde').textContent = fmt(sde);
+            document.getElementById('val-r-multiple').textContent = fmtx(multiple);
+            document.getElementById('val-r-low').textContent = fmt(low);
+            document.getElementById('val-r-mid').textContent = fmt(mid);
+            document.getElementById('val-r-high').textContent = fmt(high);
+        }
+        calcValuation();
+
+        // ─── MARGIN CALCULATOR ───
+        function calcMargin() {
+            const rev = parseFloat(document.getElementById('mgn-revenue').value) || 0;
+            const cogs = parseFloat(document.getElementById('mgn-cogs').value) || 0;
+            const opex = parseFloat(document.getElementById('mgn-opex').value) || 0;
+            const tax = parseFloat(document.getElementById('mgn-tax').value) || 0;
+
+            const gross = rev - cogs;
+            const ebit = gross - opex;
+            const net = ebit - tax;
+
+            document.getElementById('mgn-r-rev').textContent = fmt(rev);
+            document.getElementById('mgn-r-gross').textContent = fmt(gross);
+            document.getElementById('mgn-r-gm').textContent = fmtpct(rev ? gross/rev*100 : 0);
+            document.getElementById('mgn-r-ebit').textContent = fmt(ebit);
+            document.getElementById('mgn-r-om').textContent = fmtpct(rev ? ebit/rev*100 : 0);
+            document.getElementById('mgn-r-net').textContent = fmt(net);
+            document.getElementById('mgn-r-nm').textContent = fmtpct(rev ? net/rev*100 : 0);
+        }
+        calcMargin();
+
+        // ─── DSCR CALCULATOR ───
+        function calcDSCR() {
+            const noi = parseFloat(document.getElementById('dscr-noi').value) || 0;
+            const payment = parseFloat(document.getElementById('dscr-payment').value) || 0;
+            const existing = parseFloat(document.getElementById('dscr-existing').value) || 0;
+
+            const tds = payment + existing;
+            const ratio = tds ? noi / tds : 0;
+            const qualifies = ratio >= 1.25;
+
+            // Max loan: assume 10.5% rate, 10yr term
+            const monthlyRate = 0.105/12;
+            const n = 10*12;
+            const maxPayment = (noi/12) / 1.25 - (existing/12);
+            const maxLoan = maxPayment > 0 ? maxPayment * (Math.pow(1+monthlyRate,n)-1) / (monthlyRate * Math.pow(1+monthlyRate,n)) : 0;
+
+            document.getElementById('dscr-r-noi').textContent = fmt(noi);
+            document.getElementById('dscr-r-tds').textContent = fmt(tds);
+            document.getElementById('dscr-r-ratio').textContent = ratio.toFixed(2) + 'x';
+            document.getElementById('dscr-r-status').textContent = qualifies ? '✓ Likely Qualifies' : '✗ Below Minimum';
+            document.getElementById('dscr-r-status').className = 'result-value ' + (qualifies ? 'green' : 'red');
+            document.getElementById('dscr-r-max').textContent = maxLoan > 0 ? fmt(maxLoan) : 'N/A';
+        }
+        calcDSCR();
+
+        // ─── EXIT READINESS ───
+        function calcExit() {
+            const age = parseInt(document.getElementById('exit-age').value) || 0;
+            const fin = parseInt(document.getElementById('exit-financials').value) || 0;
+            const dep = parseInt(document.getElementById('exit-dependency').value) || 0;
+            const sops = parseInt(document.getElementById('exit-sops').value) || 0;
+            const trend = parseInt(document.getElementById('exit-trend').value) || 0;
+            const timeline = parseInt(document.getElementById('exit-timeline').value) || 0;
+
+            const total = age + fin + dep + sops + trend + timeline;
+            const max = 15+15+15+15+15+15;
+            const pct = Math.round(total/max*100);
+
+            let level, color, next;
+            if (pct >= 80) {
+                level = 'Market-Ready'; color = 'green'; next = 'Engage a business broker now';
+            } else if (pct >= 60) {
+                level = 'Nearly Ready'; color = 'green'; next = 'Start exit planning consultation';
+            } else if (pct >= 40) {
+                level = 'Needs Preparation'; color = 'highlight'; next = 'Exit planning program recommended';
+            } else {
+                level = 'Early Stage'; color = 'red'; next = 'Begin with a business valuation';
+            }
+
+            document.getElementById('exit-r-score').textContent = pct + ' / 100';
+            document.getElementById('exit-r-level').textContent = level;
+            document.getElementById('exit-r-level').className = 'result-value ' + color;
+            document.getElementById('exit-r-fin').textContent = fin >= 15 ? '✓ Strong' : fin >= 7 ? '~ Partial' : '✗ Needs Work';
+            document.getElementById('exit-r-fin').className = 'result-value ' + (fin>=15?'green':fin>=7?'highlight':'red');
+            document.getElementById('exit-r-indep').textContent = dep >= 15 ? '✓ Strong' : dep >= 8 ? '~ Moderate' : '✗ High Risk';
+            document.getElementById('exit-r-indep').className = 'result-value ' + (dep>=15?'green':dep>=8?'highlight':'red');
+            document.getElementById('exit-r-proc').textContent = sops >= 15 ? '✓ Documented' : sops >= 7 ? '~ Partial' : '✗ Missing';
+            document.getElementById('exit-r-proc').className = 'result-value ' + (sops>=15?'green':sops>=7?'highlight':'red');
+            document.getElementById('exit-r-next').textContent = next;
+        }
+        calcExit();
+
+        // ─── LEAD CAPTURE ───
+        function submitLead(emailId, successId) {
+            const email = document.getElementById(emailId).value;
+            if (!email || !email.includes('@')) {
+                document.getElementById(emailId).style.borderColor = 'var(--red)';
                 return;
             }
-            
-            // Calculate loan details
-            const downPaymentAmount = loanAmount * downPaymentPercent;
-            const financedAmount = loanAmount - downPaymentAmount;
-            const monthlyInterestRate = interestRate / 12;
-            
-            // Monthly payment calculation (PMT formula)
-            const monthlyPayment = (financedAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermMonths)) / 
-                                  (Math.pow(1 + monthlyInterestRate, loanTermMonths) - 1);
-            
-            const totalPayments = monthlyPayment * loanTermMonths;
-            const totalInterest = totalPayments - financedAmount;
-            const totalCost = loanAmount + totalInterest;
-            
-            // Format currency
-            function formatCurrency(num) {
-                if (num >= 1000000) {
-                    return '$' + (num / 1000000).toFixed(2) + 'M';
-                } else if (num >= 1000) {
-                    return '$' + (num / 1000).toFixed(0) + 'K';
-                }
-                return '$' + num.toLocaleString();
-            }
-            
-            // Display results
-            document.getElementById('monthlyPayment').textContent = formatCurrency(monthlyPayment);
-            document.getElementById('downPaymentAmount').textContent = formatCurrency(downPaymentAmount);
-            document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
-            document.getElementById('totalCost').textContent = formatCurrency(totalCost);
-            
-            // Show qualification requirements based on loan amount
-            const qualBadges = document.getElementById('qualificationBadges');
-            let badges = '';
-            
-            if (loanAmount >= 3000000) {
-                badges += '<span class="qualification-badge">Credit Score 720+</span>';
-                badges += '<span class="qualification-badge">25% Down Payment</span>';
-                badges += '<span class="qualification-badge">Strong Cash Flow</span>';
-                badges += '<span class="qualification-badge">Industry Experience 5+ Years</span>';
-            } else if (loanAmount >= 1000000) {
-                badges += '<span class="qualification-badge">Credit Score 700+</span>';
-                badges += '<span class="qualification-badge">15% Down Payment</span>';
-                badges += '<span class="qualification-badge">Positive Cash Flow</span>';
-                badges += '<span class="qualification-badge">Industry Experience 3+ Years</span>';
-            } else {
-                badges += '<span class="qualification-badge">Credit Score 680+</span>';
-                badges += '<span class="qualification-badge">10% Down Payment</span>';
-                badges += '<span class="qualification-badge">Business Plan</span>';
-                badges += '<span class="qualification-badge">Industry Experience</span>';
-            }
-            
-            qualBadges.innerHTML = badges;
-            
-            document.getElementById('sbaResults').style.display = 'block';
-        });
-        
-        function showPrequalForm() {
-            document.getElementById('prequalForm').style.display = 'block';
-            document.getElementById('prequalForm').scrollIntoView({behavior: 'smooth'});
+
+            // In production: POST to your CRM/email service here
+            console.log('Lead captured:', email, 'from', emailId);
+
+            document.getElementById(emailId).value = '';
+            document.getElementById(successId).style.display = 'block';
+            setTimeout(() => {
+                document.getElementById(successId).style.display = 'none';
+            }, 5000);
         }
-        
-        // Pre-qualification form submission
-        document.getElementById('prequalContactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('prequalName').value,
-                email: document.getElementById('prequalEmail').value,
-                phone: document.getElementById('prequalPhone').value,
-                creditScore: document.getElementById('prequalCredit').value,
-                liquidAssets: document.getElementById('prequalLiquid').value,
-                source: 'SBA Loan Calculator',
-                loanAmount: document.getElementById('loanAmount').value,
-                loanTerm: document.getElementById('loanTerm').value,
-                downPayment: document.getElementById('downPayment').value
-            };
-            
-            // Here you would integrate with HubSpot API or your CRM
-            console.log('SBA Lead captured:', formData);
-            
-            // Show success message
-            alert('Thank you! Your pre-qualification request has been submitted. An SBA specialist will contact you within 24 hours to discuss your financing options.');
-            
-            // Reset form
-            this.reset();
-            document.getElementById('prequalForm').style.display = 'none';
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Update interest rates periodically (simulated)
-        function updateRates() {
-            const baseRate = 11.5;
-            const variation = (Math.random() - 0.5) * 1.0; // ±0.5% variation
-            const currentRate = Math.max(10.5, Math.min(13.5, baseRate + variation));
-            document.getElementById('interestRate').value = currentRate.toFixed(2);
-        }
-        
-        // Update rates every 30 seconds (in real implementation, you'd fetch from an API)
-        setInterval(updateRates, 30000);
-        
-        // Navbar background change on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            } else {
-                navbar.style.backgroundColor = 'white';
-                navbar.style.backdropFilter = 'none';
-            }
-        });
     </script>
 </body>
 </html>
