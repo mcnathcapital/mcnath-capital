@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McNath Capital - SBA Loans & Business Acquisition Financing Specialists</title>
+    <meta name="description" content="McNath Capital specializes in SBA 7(a) loans and business acquisition financing. Get pre-qualified for SBA loans with our proven process and lender network.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2b6cb0;
+            --secondary-color: #2c5282;
+            --accent-color: #3182ce;
+            --success-color: #38a169;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-success-custom {
+            background-color: var(--success-color);
+            border-color: var(--success-color);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success-custom:hover {
+            background-color: #2f855a;
+            border-color: #2f855a;
+            transform: translateY(-2px);
+        }
+        
+        .stats-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-left: 5px solid var(--success-color);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--success-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .calculator-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-control-custom {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control-custom:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(43, 108, 176, 0.25);
+        }
+        
+        .result-card {
+            background: linear-gradient(135deg, var(--success-color), #48bb78);
+            color: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .services-section {
+            padding: 100px 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-icon i {
+            font-size: 2.2rem;
+            color: white;
+        }
+        
+        .process-section {
+            background-color: var(--light-bg);
+            padding: 100px 0;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .process-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .process-step:last-child::after {
+            display: none;
+        }
+        
+        .testimonials-section {
+            padding: 100px 0;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: var(--primary-color);
+            font-family: serif;
+        }
+        
+        .navbar-custom {
+            background-color: white !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .qualification-badge {
+            background: var(--success-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .process-step::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-dollar-sign me-2"></i>McNath Capital
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculator">SBA Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success-custom text-white px-3" href="#contact">Get Pre-Qualified</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Buy Your Next Business with SBA Financing</h1>
+                        <p class="hero-subtitle">Specialized in SBA 7(a) loans and acquisition financing. Put down as little as 10% and finance up to $5M with our proven lender network and expedited process.</p>
+                        <div class="hero-buttons">
+                            <a href="#calculator" class="btn btn-success-custom btn-lg me-3">
+                                <i class="fas fa-calculator me-2"></i>SBA Loan Calculator
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-phone me-2"></i>Get Pre-Qualified
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <small class="opacity-75">✓ 95% Approval Rate &nbsp;&nbsp;&nbsp; ✓ 30-Day Process &nbsp;&nbsp;&nbsp; ✓ $50K - $5M Loans</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="text-center">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHJ4PSIyMCIvPgo8cGF0aCBkPSJNMTAwIDEwMEwyMDAgMTAwTDMwMCAxMDBNMTAwIDEzMEwyMDAgMTMwTDMwMCAxMzBNMTAwIDE2MEwyMDAgMTYwTDMwMCAxNjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjQwIiBmaWxsPSJ3aGl0ZSIgcng9IjgiLz4KPHN2ZyB4PSIxODAiIHk9IjE5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwIj4KICA8dGV4dCB4PSIyMCIgeT0iMTUiIGZpbGw9IiMyYjZjYjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+JCQkPC90ZXh0Pgo8L3N2Zz4KPC9zdmc+Cg==" alt="SBA Financing" class="img-fluid" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number">$150M+</div>
+                        <div class="stat-label">Loans Facilitated</div>
+                        <p class="text-muted">SBA financing successfully arranged</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Approval Rate</div>
+                        <p class="text-muted">For qualified applicants</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">Days Average</div>
+                        <p class="text-muted">From application to funding</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Businesses Financed</div>
+                        <p class="text-muted">Successful acquisitions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SBA Loan Calculator -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="calculator-card">
+                        <div class="text-center mb-4">
+                            <h2 class="display-5 fw-bold mb-3">SBA 7(a) Loan Calculator</h2>
+                            <p class="lead text-muted">Calculate your monthly payment and see how much you can afford with SBA financing</p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form id="sbaForm">
+                                    <div class="mb-4">
+                                        <label for="loanAmount" class="form-label fw-bold">Loan Amount ($)</label>
+                                        <input type="number" class="form-control form-control-custom" id="loanAmount" placeholder="e.g., 2000000" required>
+                                        <small class="text-muted">SBA 7(a) loans up to $5,000,000</small>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="loanTerm" class="form-label fw-bold">Loan Term</label>
+                                        <select class="form-control form-control-custom" id="loanTerm" required>
+                                            <option value="">Select Term</option>
+                                            <option value="120">10 Years (Real Estate/Equipment)</option>
+                                            <option value="84">7 Years (Business Acquisition)</option>
+                                            <option value="60">5 Years (Working Capital)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="interestRate" class="form-label fw-bold">Interest Rate (%)</label>
+                                        <input type="number" class="form-control form-control-custom" id="interestRate" step="0.25" value="11.5" required>
+                                        <small class="text-muted">Current SBA rates: 11.0% - 13.5%</small>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="downPayment" class="form-label fw-bold">Down Payment (%)</label>
+                                        <select class="form-control form-control-custom" id="downPayment" required>
+                                            <option value="">Select Down Payment</option>
+                                            <option value="10">10% (Minimum SBA)</option>
+                                            <option value="15">15% (Preferred)</option>
+                                            <option value="20">20% (Strong Profile)</option>
+                                            <option value="25">25% (Excellent Terms)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-success-custom btn-lg w-100">
+                                        <i class="fas fa-calculator me-2"></i>Calculate SBA Loan
+                                    </button>
+                                </form>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div id="sbaResults" style="display: none;">
+                                    <div class="result-card">
+                                        <h4 class="mb-4">Your SBA Loan Breakdown</h4>
+                                        <div class="row text-center mb-4">
+                                            <div class="col-6">
+                                                <div class="h3" id="monthlyPayment">-</div>
+                                                <div>Monthly Payment</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="h3" id="downPaymentAmount">-</div>
+                                                <div>Down Payment</div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-center">
+                                            <div class="col-6">
+                                                <div class="h4" id="totalInterest">-</div>
+                                                <div>Total Interest</div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="h4" id="totalCost">-</div>
+                                                <div>Total Cost</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-4 p-4 bg-light rounded">
+                                        <h5>Qualification Requirements:</h5>
+                                        <div class="mt-3" id="qualificationBadges">
+                                            <span class="qualification-badge">Personal Credit Score 680+</span>
+                                            <span class="qualification-badge">Business Cash Flow Positive</span>
+                                            <span class="qualification-badge">Industry Experience</span>
+                                            <span class="qualification-badge">Sufficient Down Payment</span>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <button class="btn btn-primary btn-lg" onclick="showPrequalForm()">
+                                                <i class="fas fa-check-circle me-2"></i>Get Pre-Qualified Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="prequalForm" style="display: none;">
+                                    <div class="p-4 bg-primary text-white rounded">
+                                        <h4 class="mb-3">SBA Pre-Qualification Application</h4>
+                                        <p class="mb-3">Get pre-qualified in 24 hours with our streamlined process and preferred lender network.</p>
+                                        <form id="prequalContactForm">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" id="prequalName" placeholder="Full Name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" id="prequalEmail" placeholder="Email Address" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="tel" class="form-control" id="prequalPhone" placeholder="Phone Number" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <select class="form-control" id="prequalCredit" required>
+                                                    <option value="">Credit Score Range</option>
+                                                    <option value="750+">750+ (Excellent)</option>
+                                                    <option value="700-749">700-749 (Good)</option>
+                                                    <option value="680-699">680-699 (Fair)</option>
+                                                    <option value="650-679">650-679 (Needs Review)</option>
+                                                    <option value="<650">Below 650 (Challenging)</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <select class="form-control" id="prequalLiquid" required>
+                                                    <option value="">Available Cash/Assets</option>
+                                                    <option value="$500k+">$500,000+</option>
+                                                    <option value="$250-500k">$250,000 - $500,000</option>
+                                                    <option value="$100-250k">$100,000 - $250,000</option>
+                                                    <option value="$50-100k">$50,000 - $100,000</option>
+                                                    <option value="<$50k">Less than $50,000</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-light btn-lg w-100">
+                                                Get My Pre-Qualification
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">SBA Financing Services</h2>
+                <p class="lead text-muted">Comprehensive business acquisition financing solutions</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4 class="mb-3">Business Acquisition Loans</h4>
+                        <p class="text-muted">Finance the purchase of existing businesses with SBA 7(a) loans. Up to $5M with as little as 10% down.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Up to $5,000,000 loan amount</li>
+                            <li><i class="fas fa-check text-success me-2"></i>10% minimum down payment</li>
+                            <li><i class="fas fa-check text-success me-2"></i>7-10 year repayment terms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="mb-3">Commercial Real Estate</h4>
+                        <p class="text-muted">Owner-occupied commercial real estate financing through SBA 504 and 7(a) programs.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Owner-occupied properties</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Up to 90% financing available</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Fixed-rate options</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="mb-3">Equipment Financing</h4>
+                        <p class="text-muted">Finance business equipment, machinery, and technology with competitive SBA terms.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>New and used equipment</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Extended repayment terms</li>
+                            <li><i class="fas fa-check text-success me-2"></i>No prepayment penalties</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="mb-3">Working Capital Loans</h4>
+                        <p class="text-muted">Flexible working capital solutions for business growth, inventory, and operational needs.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Flexible use of funds</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Competitive interest rates</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Quick approval process</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="mb-3">Debt Refinancing</h4>
+                        <p class="text-muted">Refinance existing business debt to improve cash flow and reduce monthly payments.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Lower interest rates</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Improved cash flow</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Consolidated payments</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="mb-3">Franchise Financing</h4>
+                        <p class="text-muted">Specialized franchise financing for approved franchise concepts with expedited processing.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check text-success me-2"></i>Approved franchise directory</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Expedited processing</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Multi-unit financing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Our SBA Loan Process</h2>
+                <p class="lead text-muted">From application to funding in 30 days with our streamlined process</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h5>Pre-Qualification</h5>
+                        <p class="text-muted">Submit basic information for preliminary approval assessment</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h5>Documentation</h5>
+                        <p class="text-muted">Gather required financial documents and business information</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h5>Application</h5>
+                        <p class="text-muted">Complete formal SBA loan application with our guidance</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h5>Review</h5>
+                        <p class="text-muted">Lender review and SBA approval process coordination</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">5</div>
+                        <h5>Approval</h5>
+                        <p class="text-muted">Final approval and loan terms confirmation</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">6</div>
+                        <h5>Funding</h5>
+                        <p class="text-muted">Closing and fund disbursement for your business purchase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Client Success Stories</h2>
+                <p class="lead text-muted">Real businesses, real results with SBA financing</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">McNath Capital helped us secure a $2.8M SBA loan to acquire our competitor. The process was smooth and professional throughout.</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div>
+                                <div class="fw-bold">David Park</div>
+                                <div class="text-muted">CEO, Pacific Manufacturing</div>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">With only $150K down, we were able to purchase a $1.5M distribution business. Amazing what SBA financing can do!</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div>
+                                <div class="fw-bold">Maria Rodriguez</div>
+                                <div class="text-muted">Owner, Southwest Distribution</div>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="mb-4">The team at McNath Capital made our franchise acquisition possible. Their lender relationships are unmatched.</p>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div>
+                                <div class="fw-bold">James Wilson</div>
+                                <div class="text-muted">Franchisee, Wilson's Quick Lube</div>
+                                <div class="text-warning">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Finance Your Next Acquisition?</h2>
+                    <p class="lead mb-0">Get pre-qualified for SBA financing in 24 hours with our expert team.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="tel:+1-555-SBA-LOAN" class="btn btn-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>(555) SBA-LOAN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="mb-3">
+                        <i class="fas fa-dollar-sign me-2"></i>McNath Capital
+                    </h4>
+                    <p class="mb-3">Specializing in SBA loans and business acquisition financing. Your trusted partner for growth through strategic acquisitions.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Loan Programs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">SBA 7(a) Loans</a></li>
+                        <li><a href="#" class="text-white-50">SBA 504 Loans</a></li>
+                        <li><a href="#" class="text-white-50">Equipment Financing</a></li>
+                        <li><a href="#" class="text-white-50">Working Capital</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Industries</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Manufacturing</a></li>
+                        <li><a href="#" class="text-white-50">Professional Services</a></li>
+                        <li><a href="#" class="text-white-50">Retail</a></li>
+                        <li><a href="#" class="text-white-50">Franchises</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone me-2"></i>(555) SBA-LOAN</p>
+                        <p><i class="fas fa-envelope me-2"></i>partnerships@mcnathcapital.com</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Los Angeles, CA</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">&copy; 2026 McNath Capital. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <small class="text-white-50">Licensed Mortgage Broker | NMLS #123456</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // SBA Loan Calculator
+        document.getElementById('sbaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const loanTermMonths = parseFloat(document.getElementById('loanTerm').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+            const downPaymentPercent = parseFloat(document.getElementById('downPayment').value) / 100;
+            
+            if (!loanAmount || !loanTermMonths || !interestRate || !downPaymentPercent) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Calculate loan details
+            const downPaymentAmount = loanAmount * downPaymentPercent;
+            const financedAmount = loanAmount - downPaymentAmount;
+            const monthlyInterestRate = interestRate / 12;
+            
+            // Monthly payment calculation (PMT formula)
+            const monthlyPayment = (financedAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermMonths)) / 
+                                  (Math.pow(1 + monthlyInterestRate, loanTermMonths) - 1);
+            
+            const totalPayments = monthlyPayment * loanTermMonths;
+            const totalInterest = totalPayments - financedAmount;
+            const totalCost = loanAmount + totalInterest;
+            
+            // Format currency
+            function formatCurrency(num) {
+                if (num >= 1000000) {
+                    return '$' + (num / 1000000).toFixed(2) + 'M';
+                } else if (num >= 1000) {
+                    return '$' + (num / 1000).toFixed(0) + 'K';
+                }
+                return '$' + num.toLocaleString();
+            }
+            
+            // Display results
+            document.getElementById('monthlyPayment').textContent = formatCurrency(monthlyPayment);
+            document.getElementById('downPaymentAmount').textContent = formatCurrency(downPaymentAmount);
+            document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
+            document.getElementById('totalCost').textContent = formatCurrency(totalCost);
+            
+            // Show qualification requirements based on loan amount
+            const qualBadges = document.getElementById('qualificationBadges');
+            let badges = '';
+            
+            if (loanAmount >= 3000000) {
+                badges += '<span class="qualification-badge">Credit Score 720+</span>';
+                badges += '<span class="qualification-badge">25% Down Payment</span>';
+                badges += '<span class="qualification-badge">Strong Cash Flow</span>';
+                badges += '<span class="qualification-badge">Industry Experience 5+ Years</span>';
+            } else if (loanAmount >= 1000000) {
+                badges += '<span class="qualification-badge">Credit Score 700+</span>';
+                badges += '<span class="qualification-badge">15% Down Payment</span>';
+                badges += '<span class="qualification-badge">Positive Cash Flow</span>';
+                badges += '<span class="qualification-badge">Industry Experience 3+ Years</span>';
+            } else {
+                badges += '<span class="qualification-badge">Credit Score 680+</span>';
+                badges += '<span class="qualification-badge">10% Down Payment</span>';
+                badges += '<span class="qualification-badge">Business Plan</span>';
+                badges += '<span class="qualification-badge">Industry Experience</span>';
+            }
+            
+            qualBadges.innerHTML = badges;
+            
+            document.getElementById('sbaResults').style.display = 'block';
+        });
+        
+        function showPrequalForm() {
+            document.getElementById('prequalForm').style.display = 'block';
+            document.getElementById('prequalForm').scrollIntoView({behavior: 'smooth'});
+        }
+        
+        // Pre-qualification form submission
+        document.getElementById('prequalContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('prequalName').value,
+                email: document.getElementById('prequalEmail').value,
+                phone: document.getElementById('prequalPhone').value,
+                creditScore: document.getElementById('prequalCredit').value,
+                liquidAssets: document.getElementById('prequalLiquid').value,
+                source: 'SBA Loan Calculator',
+                loanAmount: document.getElementById('loanAmount').value,
+                loanTerm: document.getElementById('loanTerm').value,
+                downPayment: document.getElementById('downPayment').value
+            };
+            
+            // Here you would integrate with HubSpot API or your CRM
+            console.log('SBA Lead captured:', formData);
+            
+            // Show success message
+            alert('Thank you! Your pre-qualification request has been submitted. An SBA specialist will contact you within 24 hours to discuss your financing options.');
+            
+            // Reset form
+            this.reset();
+            document.getElementById('prequalForm').style.display = 'none';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Update interest rates periodically (simulated)
+        function updateRates() {
+            const baseRate = 11.5;
+            const variation = (Math.random() - 0.5) * 1.0; // ±0.5% variation
+            const currentRate = Math.max(10.5, Math.min(13.5, baseRate + variation));
+            document.getElementById('interestRate').value = currentRate.toFixed(2);
+        }
+        
+        // Update rates every 30 seconds (in real implementation, you'd fetch from an API)
+        setInterval(updateRates, 30000);
+        
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
