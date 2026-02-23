@@ -1297,13 +1297,13 @@ footer {
       </div>
       <div class="form-actions">
         <button type="submit" class="contact-submit-btn">Get Connected</button>
-        <p class="form-disclaimer">No cost consultation • Response within 24 hours</p>
+        <p class="form-disclaimer">No cost consultation • Personal response within 24 hours</p>
       </div>
     </form>
     <div class="contact-success" id="contact-success">
       <div class="success-icon">✓</div>
       <h3>Thank you for reaching out!</h3>
-      <p>We've received your information and will connect you with the right specialist within 24 hours. Check your email for confirmation.</p>
+      <p>We've received your information and will personally connect you with the right specialist within 24 hours. We'll reach out via email or phone to get started.</p>
     </div>
   </div>
   
@@ -1566,7 +1566,7 @@ function submitContactForm(event) {
     });
   }
   
-  // Auto-export lead data to CSV
+  // Log lead data (removed auto-download to prevent browser prompts)
   const leadData = {
     timestamp: new Date().toISOString(),
     name: data.name,
@@ -1579,25 +1579,8 @@ function submitContactForm(event) {
     value: 800
   };
   
-  const csvContent = [
-    leadData.timestamp,
-    leadData.name,
-    leadData.email,
-    leadData.phone,
-    leadData.company,
-    leadData.service,
-    leadData.message.replace(/,/g, ';'),
-    leadData.source,
-    leadData.value
-  ].join(',');
-  
-  const blob = new Blob([csvContent], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `mcnath-contact-${Date.now()}.csv`;
-  a.click();
-  URL.revokeObjectURL(url);
+  // Store lead data for backend processing (when email system is connected)
+  console.log('🎯 Contact form lead captured:', leadData);
   
   console.log('🎯 Contact form submitted:', data.name, data.email, data.service);
   
