@@ -1,35 +1,33 @@
+# McNath Capital Group - robots.txt
+# https://mcnathcapital.com
+
 User-agent: *
 Allow: /
+Disallow:
 
-# Sitemap location
+# AI Crawlers - Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://mcnathcapital.com/sitemap.xml
-
-# Block access to sensitive files
-Disallow: /.git/
-Disallow: /backup.html
-Disallow: /test.html
-Disallow: /test-deploy.html
-Disallow: /analytics-setup.html
-
-# Allow major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Block known bad bots
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-# Crawl-delay for general bots
-Crawl-delay: 1
